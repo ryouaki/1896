@@ -14,14 +14,7 @@ export const indexActionInit = (actionType) => {
 export const indexTestAction = () => {
     return (dispatch) => {
         dispatch(indexActionInit(ACTION_FETCHING));
-        fetch(window.Hi1896.serverUrl+'/index', {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            mode: 'cors',
-            cache: 'default'
-        }).then(() => {
+        fetch(window.Hi1896.serverUrl+'/index').then(() => {
             dispatch(indexActionInit(ACTION_FETCH_OK));
         }).catch(() => {
             dispatch(indexActionInit(ACTION_FETCH_ERROR));

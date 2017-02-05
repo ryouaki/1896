@@ -6,7 +6,7 @@ let defaultRouter = require('./defaultRouter');
 let indexRouter = require('./indexRouter');
 
 let routerMap = [
-   {method: "get", path: "/index",functions: indexRouter.index},
+   {method: "get", path: "/index",functions: indexRouter.index}
 ];
 
 routerMap.forEach(function(route) {

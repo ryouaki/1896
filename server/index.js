@@ -14,11 +14,11 @@ let routers = require('./routers');
 let app = express();
 
 app.use(compression());
+app.use(methodOverride('_method'));
 app.use(logger);
 app.use(cros);
-app.use(methodOverride('_method'));
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
