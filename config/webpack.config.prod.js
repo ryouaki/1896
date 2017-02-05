@@ -196,7 +196,8 @@ module.exports = {
     // In production, it will be an empty string unless you specify "homepage"
     // in `package.json`, in which case it will be the pathname of that URL.
     new InterpolateHtmlPlugin({
-      PUBLIC_URL: publicUrl
+      PUBLIC_URL: publicUrl,
+      SERVER_URL: '/api'
     }),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({

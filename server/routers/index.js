@@ -3,10 +3,10 @@ let router = express.Router();
 
 let defaultRouter = require('./defaultRouter');
 
+let indexRouter = require('./indexRouter');
+
 let routerMap = [
-   {method: "get", path: "/index",functions: []},
-   {method: "get", path: "/index1",functions: function(q, r, n){n()}},
-   {method: "get", path: "/index1",functions: {}},
+   {method: "get", path: "/index",functions: indexRouter.index},
 ];
 
 routerMap.forEach(function(route) {

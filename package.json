@@ -4,6 +4,7 @@
   "private": true,
   "main": "server/index.js",
   "homepage": "https://ryouaki.herokuapp.com/",
+  "dev_server": "http://localhost:3000/",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
@@ -55,6 +56,7 @@
   },
   "dependencies": {
     "body-parser": "^1.16.0",
+    "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.1",
     "file-stream-rotator": "0.0.7",

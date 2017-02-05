@@ -3,6 +3,7 @@ let express = require('express');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
+var compression = require('compression');
 
 global.rootDir = path.join(__dirname, '..');
 
@@ -11,6 +12,7 @@ let routers = require('./routers');
 
 let app = express();
 
+app.use(compression());
 app.use(logger);
 app.use(methodOverride('_method'));
 app.use(cookieParser());

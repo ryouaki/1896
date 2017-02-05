@@ -19,6 +19,7 @@ var publicUrl = '';
 // Get environment variables to inject into our app.
 var env = getClientEnvironment(publicUrl);
 
+var devServer = require(paths.appPackageJson).dev_server;
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
@@ -176,7 +177,8 @@ module.exports = {
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     // In development, this will be an empty string.
     new InterpolateHtmlPlugin({
-      PUBLIC_URL: publicUrl
+      PUBLIC_URL: publicUrl,
+      SERVER_URL: devServer+'api'
     }),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
