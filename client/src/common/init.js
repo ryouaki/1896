@@ -2,6 +2,7 @@
     
     // Get server address.
     let serverUrl = document.getElementsByTagName('meta')['server'];
+    serverUrl = serverUrl.content;
 
     let initRootFontSize = () => {
         let rootFontSize = 0;
@@ -21,7 +22,7 @@
 
     window.addEventListener('resize', resizeCallback, false);
 
-    root.hi1896 = {
+    root.Hi1896 = {
         initRootFontSize,
         serverUrl
     }
