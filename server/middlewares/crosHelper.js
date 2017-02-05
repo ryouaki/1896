@@ -9,7 +9,7 @@ exports = module.exports = (req, res, next) => {
     res.header("Content-Type", "application/json;charset=utf-8");
 
     if (req.method === 'OPTIONS') {
-        return res.end();
+        return res.status(200).end();
     } else {
         return next();
     }
