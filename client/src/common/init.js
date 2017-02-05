@@ -22,7 +22,8 @@
     window.addEventListener('resize', resizeCallback, false);
 
     root.hi1896 = {
-        initRootFontSize
+        initRootFontSize,
+        serverUrl
     }
 
     initRootFontSize();
