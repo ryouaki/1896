@@ -1,7 +1,7 @@
 let fs = require('fs');
 let path = require('path');
 
-let webConfig = path.join(global.rootDir, 'server', 'config', 'webConfig.json');
+let webConfig = path.join(global.rootDir, 'server', 'config', 'WebConfig.json');
 
 exports = module.exports = {
     getIndexInfo: () => {
