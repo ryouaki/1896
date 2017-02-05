@@ -1,5 +1,7 @@
 let logger = require('./loggerHelper');
+let cros = require('./crosHelper');
 
 exports = module.exports = {
-    logger: logger
+    logger: logger,
+    cros: cros
 };

@@ -8,12 +8,14 @@ var compression = require('compression');
 global.rootDir = path.join(__dirname, '..');
 
 let logger = require('./middlewares').logger;
+let cros = require('./middlewares').cros;
 let routers = require('./routers');
 
 let app = express();
 
 app.use(compression());
 app.use(logger);
+app.use(cros);
 app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
