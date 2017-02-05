@@ -56,6 +56,9 @@ module.exports = {
   devtool: 'source-map',
   // In production, we only want to load the polyfills and the app code.
   entry: {
+    common: [
+      paths.appCommonJs
+    ],
     main: [
       require.resolve('./polyfills'),
       paths.appIndexJs
@@ -188,7 +191,7 @@ module.exports = {
   },
   plugins: [
     new CommonsChunkPlugin({
-			name: [ 'vendors' ],
+			name: [ 'common', 'vendors' ],
   		minChunks: Infinity,
 		}),
     // Makes the public URL available as %PUBLIC_URL% in index.html, e.g.:
@@ -229,7 +232,9 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         screw_ie8: true, // React doesn't support IE8
-        warnings: false
+        warnings: false,
+        drop_debugger: true,
+        drop_console: true
       },
       mangle: {
         screw_ie8: true
