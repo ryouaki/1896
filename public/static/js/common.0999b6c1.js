@@ -1,2 +1,0 @@
-webpackJsonp([2],{0:function(n,o,t){n.exports=t(83)},82:function(n,o){"use strict";console.log("const")},83:[181,84,82],84:function(n,o){"use strict";console.log("init")},181:function(n,o,t,c,s){"use strict";t(c),t(s)}});
-//# sourceMappingURL=common.0999b6c1.js.map

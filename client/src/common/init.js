@@ -20,7 +20,15 @@
         initRootFontSize();
     }
 
+    let onloadCallback = () => {
+        let loadingDiv = document.getElementById('loading-div');
+        if (loadingDiv) {
+            document.body.removeChild(loadingDiv);
+        }
+    }
+
     window.addEventListener('resize', resizeCallback, false);
+    window.addEventListener('load', onloadCallback, false);
 
     root.Hi1896 = {
         initRootFontSize,
