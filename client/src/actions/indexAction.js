@@ -4,28 +4,28 @@ import {
     ACTION_FETCH_ERROR 
 } from './index';
 
-export const indexActionFetch = () => {
+const indexActionFetch = () => {
     return {
         type: ACTION_FETCHING,
         payload: {}
     }
 }
 
-export const indexActionFetchError = () => {
+const indexActionFetchError = () => {
     return {
         type: ACTION_FETCH_ERROR,
         payload: {}
     }
 }
 
-export const indexActionFetchResult = (data) => {
+const indexActionFetchResult = (data) => {
     return {
         type: ACTION_FETCH_OK,
         payload: data
     }
 }
 
-export const indexTestAction = () => {
+const indexInitAction = () => {
     return (dispatch) => {
         dispatch(indexActionFetch());
         fetch(window.Hi1896.serverUrl+'/index').then((data) => {
@@ -35,4 +35,8 @@ export const indexTestAction = () => {
         });
 
     }
+}
+
+export default {
+    indexInitAction: indexInitAction
 }
