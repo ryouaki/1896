@@ -4,20 +4,34 @@ import {
     ACTION_FETCH_ERROR 
 } from './index';
 
-export const indexActionInit = (actionType) => {
+export const indexActionFetch = () => {
     return {
-        type: actionType,
-        data: {}
+        type: ACTION_FETCHING,
+        payload: {}
+    }
+}
+
+export const indexActionFetchError = () => {
+    return {
+        type: ACTION_FETCH_ERROR,
+        payload: {}
+    }
+}
+
+export const indexActionFetchResult = (data) => {
+    return {
+        type: ACTION_FETCH_OK,
+        payload: data
     }
 }
 
 export const indexTestAction = () => {
     return (dispatch) => {
-        dispatch(indexActionInit(ACTION_FETCHING));
-        fetch(window.Hi1896.serverUrl+'/index').then(() => {
-            dispatch(indexActionInit(ACTION_FETCH_OK));
+        dispatch(indexActionFetch());
+        fetch(window.Hi1896.serverUrl+'/index').then((data) => {
+            dispatch(indexActionFetchResult(data));
         }).catch(() => {
-            dispatch(indexActionInit(ACTION_FETCH_ERROR));
+            dispatch(indexActionFetchError());
         });
 
     }
