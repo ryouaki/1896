@@ -28,6 +28,10 @@
 
 .header-right-font-size {
     font-size: 14px;
+}
+
+.header-logo-right-div {
+    display: flex;
     cursor: pointer;
 }
 
@@ -36,6 +40,7 @@
 }
 
 .header-avatar-img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
