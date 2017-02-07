@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import IndexView from './index/IndexView';
+import IndexContainer from './index/IndexContainer';
 import actions from '../actions/indexAction';
 
 function mapStateToProps(state) {
@@ -10,4 +10,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, actions)(IndexView);
+export default connect(mapStateToProps, actions)(IndexContainer);

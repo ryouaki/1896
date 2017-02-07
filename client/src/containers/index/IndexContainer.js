@@ -2,7 +2,7 @@ import React from 'react';
 
 import Loading from '../../components/Loading';
 
-class IndexView extends React.Component {
+class IndexContainer extends React.Component {
 
     componentDidMount() {
         this.props.indexInitAction();
@@ -18,4 +18,4 @@ class IndexView extends React.Component {
     }
 }
 
-export default IndexView;
+export default IndexContainer;
