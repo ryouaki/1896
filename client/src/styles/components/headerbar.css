@@ -1,0 +1,41 @@
+.header-root-div {
+    height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header-logo-text {
+    line-height: 24px;
+}
+
+.header-left-font-size {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.header-right-font-size {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-right-logo-text:hover {
+    color: #4078c0;
+}
+
+.header-avatar-img {
+    width: 24px;
+    height: 24px;
+}
