@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/components/loading.css';
-
 class Loading extends React.Component {
     render() {
         return(

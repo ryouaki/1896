@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Loading from '../../components/Loading';
+import HeaderBar from '../../components/HeaderBar';
 
 class IndexContainer extends React.Component {
 
@@ -12,7 +13,10 @@ class IndexContainer extends React.Component {
         return(
             <div>
                 { this.props.isFetching && <Loading/> }
-                1111
+                <HeaderBar/>
+                <div>
+                    222
+                </div>
             </div>
         )
     }
