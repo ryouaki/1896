@@ -5,7 +5,6 @@ import actions from '../actions/indexAction';
 
 function mapStateToProps(state) {
     return {
-        isFetching: state.index.isFetching,
         indexMenu: state.index.indexMenu
     }
 }

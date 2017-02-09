@@ -7,7 +7,7 @@ require('isomorphic-fetch');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import promise from 'redux-promise';
+// import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 import ReduxThunk from 'redux-thunk';
 import mainMiddleWare from './middlewares';
@@ -17,7 +17,7 @@ import { Router, browserHistory } from 'react-router';
 
 import Routes from './routes';
 
-let middleware = [ReduxThunk, promise, mainMiddleWare];
+let middleware = [ReduxThunk, mainMiddleWare];
 if (process.env.NODE_ENV !== 'production') {
     middleware.push(createLogger())
 }
