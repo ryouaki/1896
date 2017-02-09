@@ -13,7 +13,7 @@ class IndexContainer extends React.Component {
             <div>
                 <HeaderBar/>
                 <div>
-                    222
+                    This is Content!
                 </div>
             </div>
         )
