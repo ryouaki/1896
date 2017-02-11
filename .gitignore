@@ -2,6 +2,7 @@
 node_modules/
 src/node_modules/
 source/node_modules/
+.vscode/
 source/PowerPortal/node_modules/
 .DS_Store
 *.zip
