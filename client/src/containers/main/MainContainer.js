@@ -3,6 +3,10 @@ import Loading from '../../components/Loading';
 
 class MainWarpView extends React.Component {
 
+    static propTypes = {
+        isFetching: React.PropTypes.bool.isRequired
+    }
+
     render() {
         return(
             <div>
