@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { createContainer } from '../common/ConnectHelper';
 
 import MainContainer from './main/MainContainer';
 
@@ -9,4 +9,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(MainContainer);
+export default createContainer(mapStateToProps, undefined, MainContainer);
