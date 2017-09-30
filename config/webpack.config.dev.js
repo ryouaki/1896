@@ -97,7 +97,7 @@ module.exports = {
       // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
-      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
+      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson, paths.appComponent]),
     ],
   },
   module: {
@@ -122,7 +122,7 @@ module.exports = {
             loader: require.resolve('eslint-loader'),
           },
         ],
-        include: paths.appSrc,
+        include: [paths.appComponent, paths.appSrc],
       },
       {
         // "oneOf" will traverse all following loaders until one will
@@ -143,7 +143,7 @@ module.exports = {
           // Process JS with Babel.
           {
             test: /\.(js|jsx)$/,
-            include: paths.appSrc,
+            include: [paths.appComponent, paths.appSrc],
             loader: require.resolve('babel-loader'),
             options: {
               

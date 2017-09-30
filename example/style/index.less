@@ -1,0 +1,48 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+
+  &:link, &:visited, &:hover, &:active {
+    color: black;
+  }
+}
+
+#root {
+  display: flex;
+}
+
+.menu-base {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.slide-menus {
+  width: 200px;
+  min-height: 100%;
+
+  .menu-logo {
+    .menu-base;
+  }
+
+  .menu-items {
+    .menu-base;
+  }
+  .menu-items-list {
+    .menu-item {
+      height: 30px;
+      line-height: 30px;
+      padding-left: 30px;
+    }
+  }
+}

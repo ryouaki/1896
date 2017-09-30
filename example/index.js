@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.less';
+import { HashRouter } from 'react-router-dom';
+import './style/index.less';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(
+  <HashRouter basename="/">
+    <App />
+  </HashRouter>,
+  document.getElementById('root')
+);
