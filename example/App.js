@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return [
       <Menus key='Menus'/>,
-      <Route  key='Article' path="/:id" component={Article}/>
+      <Route key='Article' path="/:id?" component={Article}/>
     ]
   }
 }

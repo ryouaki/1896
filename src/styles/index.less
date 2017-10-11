@@ -1,0 +1,24 @@
+@textColor: #24292e;
+@borderColor: rgba(27,31,35,0.2);
+@whiteColor: #FFFFFF;
+@blueColor: #0366d6;
+@fontSize: 14px;
+
+
+.ryouaki-ui-button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  color: @textColor;
+  border: 1px solid @borderColor;
+  background-color: @whiteColor;
+  border-radius: 4px;
+  font-size: @fontSize;
+  padding: 4px 8px;
+
+  &.primary {
+    background-color: @blueColor;
+    color: @whiteColor;
+  }
+}
