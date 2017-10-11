@@ -36,20 +36,18 @@ class ButtonPage extends Component {
         <li>预留点击事件接口</li>
         <li>预留改变按钮内部元素接口，可以自定义按钮显示内容，以满足对图文按钮和图标按钮的需求</li>
       </ul>
-      <div>
+      <Panel
+        title={'按钮'}
+      >
         <Button
           isPrimary={true}
         />
         <Button
-          isPrimary={true}
         />
         <Button
-          isPrimary={true}
+          className="customize-btn-style"
         />
-        <Button
-          isPrimary={true}
-        />
-      </div>
+      </Panel>
     </Template>
   }
 }

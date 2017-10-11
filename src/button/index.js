@@ -21,10 +21,11 @@ class Button extends React.PureComponent {
   render() {
     let {
       body,
-      isPrimary
+      isPrimary,
+      className
     } = this.props;
 
-    return <button className={classname("ryouaki-ui-button", {'primary': isPrimary})}>
+    return <button className={classname("ryouaki-ui-button", {'primary': isPrimary}, className)}>
         { body }
       </button>
   }

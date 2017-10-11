@@ -7,8 +7,13 @@ class Panel extends Component {
       title
     } = this.props
 
-    return <div>
+    return <div className="section-panel">
+        <header>
+          { title }
+        </header>
+        <section>
         { this.props.children }
+        </section>
       </div>
   }
 }
