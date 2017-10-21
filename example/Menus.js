@@ -14,6 +14,9 @@ class Menus extends Component {
           <Link to="/">开始</Link>
         </div>
         <div className="menu-items">
+          <Link to="/principle">原则</Link>
+        </div>
+        <div className="menu-items">
           组件
         </div>
         <div className="menu-items-list">

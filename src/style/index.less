@@ -1,7 +1,8 @@
 @textColor: #24292e;
 @borderColor: rgba(27,31,35,0.2);
 @whiteColor: #FFFFFF;
-@blueColor: #0366d6;
+@blueColor1: #2C80D6;
+@blueColor2: #4B9EE4;
 @fontSize: 14px;
 
 
@@ -18,7 +19,21 @@
   padding: 4px 8px;
 
   &.primary {
-    background-color: @blueColor;
+    background-color: @blueColor1;
     color: @whiteColor;
+  }
+
+  &.simple {
+    border: none;
+    padding: 0px;
+  }
+
+  &:hover {
+    color: @blueColor2;
+
+    &.primary {
+      color: @whiteColor;
+      background-color: @blueColor2;
+    }
   }
 }
